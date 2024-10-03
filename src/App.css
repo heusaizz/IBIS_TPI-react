@@ -1,42 +1,78 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #000;
+}
+
+.login-button {
+  background-color: transparent;
+  border: 2px solid #000;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.nav button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.1rem;
+  margin: 0 20px;
+  cursor: pointer;
+  color: #000;
+  border-bottom: 2px solid transparent;
+}
+
+.nav button:hover {
+  border-bottom: 2px solid #000;
+}
+
+.section {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #fff;
+  margin: 40px 0;
+}
+
+.section:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.footer p {
+  margin: 10px 0;
 }
