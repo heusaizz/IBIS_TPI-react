@@ -1,37 +1,29 @@
-import PropTypes from 'prop-types';
 import './Home.css';
 
-const Home = ({ aboutRef, contactRef }) => {
+const Home = () => {
     return (
         <div className="home">
-            {/* Sección "Sobre la Institución" */}
-            <section ref={aboutRef} className="about-section">
-                <h2>Sobre la Institución</h2>
-                <p>
-                    Bienvenidos a <strong>IBIS</strong>, tu centro de estética de confianza.
-                    Nos especializamos en ofrecer servicios de belleza y bienestar adaptados
-                    a tus necesidades. Nuestro equipo de expertos está comprometido a brindarte
-                    la mejor experiencia para ayudarte a sentirte y verte mejor.
-                </p>
-            </section>
-
-            {/* Sección "Contacto" */}
-            <section ref={contactRef} className="contact-section">
-                <h2>Contacto</h2>
-                <p>Para más información o para hacer una cita, contáctanos a través de:</p>
-                <ul>
-                    <li>Teléfono: +123 456 789</li>
-                    <li>Email: contacto@ibis.com</li>
-                </ul>
+            <h2>Lo que tus manos necesitan.</h2>
+            <button className="cta-button">Programa tu cita acá</button>
+            <section className="services-section">
+                <h3>Conocé nuestros servicios</h3>
+                <div className="service-list">
+                    <div className="service-item">
+                        <img src="path_to_manicure_image" alt="Manicura" />
+                        <p>Manicura</p>
+                    </div>
+                    <div className="service-item">
+                        <img src="path_to_podology_image" alt="Podología" />
+                        <p>Podología</p>
+                    </div>
+                    <div className="service-item">
+                        <img src="path_to_hair_image" alt="Peluquería" />
+                        <p>Peluquería</p>
+                    </div>
+                </div>
             </section>
         </div>
     );
-};
-
-// Validación de props con PropTypes
-Home.propTypes = {
-    aboutRef: PropTypes.object.isRequired,
-    contactRef: PropTypes.object.isRequired,
-};
+}
 
 export default Home;
