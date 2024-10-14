@@ -3,6 +3,8 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .login-form {
@@ -10,16 +12,20 @@
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
 }
 
 .login-form h2 {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .login-form input {
   width: 100%;
   margin-bottom: 10px;
   padding: 10px;
+  font-size: 1rem;
 }
 
 .login-form button {
@@ -28,5 +34,16 @@
   background-color: #964B00;
   color: white;
   border: none;
+  font-size: 1.2rem;
   cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #7a3700;
+}
+
+@media (max-width: 768px) {
+  .login-form {
+      padding: 15px;
+  }
 }

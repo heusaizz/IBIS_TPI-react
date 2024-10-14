@@ -1,28 +1,53 @@
 .home {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 100vh;  /* Ocupar toda la altura disponible */
 }
 
 .cta-button {
-  padding: 10px 20px;
+  padding: 15px 30px;
   background-color: #FF6347;
   color: white;
   border: none;
   border-radius: 5px;
+  font-size: 1.2rem;
   cursor: pointer;
+  margin-bottom: 30px;
 }
 
 .cta-button:hover {
   background-color: #FF4500;
 }
 
+.services-section {
+  width: 100%;
+  max-width: 1200px;
+}
+
 .service-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 20px;
 }
 
 .service-item {
-  width: 150px;
+  width: 30%;
   text-align: center;
+}
+
+.service-item img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .service-item {
+      width: 100%; /* Las imágenes ocupan todo el ancho en pantallas pequeñas */
+      margin-bottom: 20px;
+  }
 }
